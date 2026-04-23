@@ -1,4 +1,4 @@
-
+use
 * { box-sizing: border-box;}
 
 body { margin: 0px; 
@@ -191,4 +191,11 @@ footer { height: 50%;
 .dot.active {
   background-color: white;
   transform: scale(1.2);
+}
+
+/* desktop */
+
+@media(min-width: 768px){ 
+
+footer { height: 15%}
 }
