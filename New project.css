@@ -9,6 +9,7 @@ body { margin: 0px;
 header {display: flex; 
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         gap: 220px;
         position: fixed;
         left: 0px; top: 0px;
@@ -23,6 +24,7 @@ header {display: flex;
 
 /* navigation*/
 nav { display: flex;
+      justify-content: space-between;
       background: coral;
       color: white;
       height: 100%;
@@ -54,6 +56,7 @@ a:hover { background: gray;
         gap: 30px;}
          
 main { margin-top: 50px;
+       padding: 10px;
        display: flex;
        flex-direction: column;
        align-items: center;
