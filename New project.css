@@ -120,7 +120,8 @@ i { font-size: 40px;}
 footer { height: 50%;
          background: coral;
          display: flex;
-         flex-direction: column;}
+         flex-direction: column;
+         align-items: center;}
 
 .link { display: flex;
         flex-direction: row;
