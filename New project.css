@@ -197,6 +197,10 @@ footer { height: 50%;
 
 @media(min-width: 768px){ 
 
+.PROFESSIONAL { height: 200px;}
+
+.INDUSTRIAL{ height: 250px;}
+
 footer { height: 15%}
 
 nav { width: 40%;}
