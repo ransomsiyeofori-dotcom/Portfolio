@@ -23,7 +23,12 @@ const errorEmail = document.getElementById("erroremail");
 const errorSubject = document.getElementById("errorsubject");
 
 const errorTextarea = document.getElementById("errortextarea");
-       
+
+const moreToggle = document.getElementById("more-toggle");
+
+const btnMore = document.getElementById("btn-more");
+
+   
        
  
        
@@ -145,6 +150,14 @@ if(isName && isNmail && isSubject && isTextarea){
 
 
  });
+ 
+ /*--------show more -------*/
+ 
+btnMore.addEventListener("click", () => {
+ 
+moreToggle.classList.toggle("open");
+  
+});
  
    
    
