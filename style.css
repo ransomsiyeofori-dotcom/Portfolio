@@ -20,7 +20,7 @@ header { position: fixed;
        align-items: center;
       justify-content: space-between;
       padding: 10px;
-      z-index: 999;}
+      z-index: 1000;}
 #icon {color: #D4AF37;
        font-size: 1.8rem;
        transition: 0.3s ease;}
@@ -76,7 +76,7 @@ header { position: fixed;
     box-shadow:
         0 8px 32px rgba(0, 0, 0, .35),
         inset 0 1px 1px rgba(255, 255, 255, .05);
-    z-index: 1000;
+    z-index: 1;
     pointer-events: auto;
     padding: 20px;
    transition: all 0.8s ease;
