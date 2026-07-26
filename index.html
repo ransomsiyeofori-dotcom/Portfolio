@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
    <html lang="en">
     <head>
@@ -9,7 +10,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <link rel="stylesheet" href="style.css">
           <title>Portfolio</title>
 </head>
-  <body>
+  <body id="home">
       
 <header>
   <img src="ransomlogo.png" alt="logo" height="100px" width="100px">
@@ -20,7 +21,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <Nav class="nav" id="nav">
   <div class="link-con">
   <div class="close-btn-container">
-  <i class="fa-solid fa-xmark" id="close-btn"></i>
+<i class="fa-solid fa-xmark" id="close-btn"></i>
   </div>
   
   <div class="nav-links">
@@ -64,8 +65,8 @@ Projects</button>
 <div class="sidebar-divider"></div>
 
 <div class="social-media-icons">
-  <i class="fa-brands fa-github" id="social-icons"></i>
-<i class="fa-brands fa-linkedin-in" id="social-icons"></i>
+  <a href="https://github.com/ransomsiyeofori-dotcom"><i class="fa-brands fa-github" id="social-icons"></i></a>
+<a href="https://www.linkedin.com/in/ransom-siyeofori-573187204"><i class="fa-brands fa-linkedin-in" id="social-icons"></i></a>
 <i class="fa-brands fa-x-twitter" id="social-icons"></i>
 <i class="fa-brands fa-instagram" id="social-icons"></i>
 </div>
@@ -93,7 +94,7 @@ Projects</button>
  </div>
  <div class="btn-container">
  <button class="btn-work">View My Work <i class="fa-solid fa-arrow-right" id="icon-fa"></i><i</button>
- <button class="btn-work"><a href="George_Ransom_Siyeofori_CV.pdf" download> Download Cv<i class="fa-solid fa-download" id="fa-icon"></i></a></button>
+  <button class="btn-work"><a href="George_Ransom_Siyeofori_CV.pdf" download> Download Cv<i class="fa-solid fa-download" id="fa-icon"></i></a></button>
   </div>
   
 <div class="contact">
@@ -101,10 +102,10 @@ Projects</button>
 
   <p class="para">Find me on:</p>
   
-  <i class="fa-brands fa-linkedin-in" id="icons"></i>
+  <a href="https://www.linkedin.com/in/ransom-siyeofori-573187204"><i class="fa-brands fa-linkedin-in" id="icons"></i></a>
 
 <!-- GitHub -->
-<i class="fa-brands fa-github" id="icons"></i>
+<a href="https://github.com/ransomsiyeofori-dotcom"><i class="fa-brands fa-github" id="icons"></i></a>
 
 <!-- Twitter (X) -->
 <i class="fa-brands fa-x-twitter" id="icons"></i>
@@ -115,7 +116,7 @@ Projects</button>
   </section>
   
 <!------------About Me------------->
-<section class="aboutMe">
+<section class="aboutMe" id="about">
   
   
   <div class="icons-container">
@@ -132,14 +133,17 @@ Projects</button>
  </div>
  
  </div>
- <p class="para">I am a passionate Frontend Developer with a strong foundation in building modern applications. I love turning ideas into beautiful, functional and responsive websites. I enjoy solving problems, learning new technologies and creating seamless user experience.</p>
+ <p class="para">I am a Frontend Developer and lifelong learner with a passion for building modern, responsive, and user-focused web applications. I enjoy transforming ideas into clean, functional, and visually engaging digital experiences. Beyond writing code, I love solving problems, learning new technologies, and continuously improving my craft.</p>
+<div id="more-toggle"><p class="para">My journey spans frontend development with HTML5, CSS3, JavaScript, and React, as well as backend technologies such as Node.js, Express.js, MongoDB, and JWT authentication. I believe great software is not only about functionality but also about creating seamless and meaningful user experiences.</p>
+<p class="para">
+As a Mathematics Tutor and Administrative Support Officer, I bring patience, analytical thinking, and strong communication skills into every project I build. Whether I'm developing a portfolio website, an e-learning platform, or exploring new technologies, I am committed to creating solutions that make a positive impact and deliver real value.</p></div>
   
-   <button class="btn-work">More About Me <i class="fa-solid fa-arrow-right" id="icon-fa"></i><i</button>
+<button class="btn-work" id="btn-more">More About Me <i class="fa-solid fa-arrow-right" id="icon-fa"></i><i</button>
   </section>
     
 <!--------Skill------------>
 
-<section class="skill">
+<section class="skill" id="skills">
   
 <div class="skill-heading-container">
 <i class="fa-solid fa-code" id="code"></i>
@@ -198,35 +202,36 @@ Projects</button>
       </div>
 </div>
   </section>
-  
+ <!--------bottom bar-----------> 
 <section class="nav-bar">
 <div class="nav-icon-bottom">
   
-  <i class="ri-home-5-line"></i>
+ <a href="#home"> <i class="ri-home-5-line"></i></a>
   <p>Home</p>
   
 </div>
 
 <div class="nav-icon-bottom">
- <i class="ri-user-3-line"></i>
+  
+<a href="#about"> <i class="ri-user-3-line"></i></a>
  <p>About</p>
  
 </div>
   
   <div class="nav-icon-bottom">
-<i class="ri-code-s-slash-line"></i>
+<a href="#skills"><i class="ri-code-s-slash-line"></i></a>
   <p>Skills</p>
   
 </div>
 
 <div class="nav-icon-bottom">
-<i class="ri-folder-open-line"></i>
+<a href="#project"><i class="ri-folder-open-line"></i></a>
   <p>Projects</p>
   
 </div>
 
 <div class="nav-icon-bottom">
-  <i class="ri-mail-line"></i>
+ <a href="#contact"><i class="ri-mail-line"></i></a>
  
   <p>Contact</p>
   
@@ -235,7 +240,7 @@ Projects</button>
   
   <!--------------Project--------------->
   
-<section class="project">
+<section class="project" id="project">
 <div class="project-icon">
 <i class="fa-solid fa-briefcase"></i>
 
@@ -261,7 +266,7 @@ Projects</button>
        
     <div class="portfolio-link">
   <button class="live-demo-btn"><a href="https://ransomsiyeofori-dotcom.github.io/E-Learning-/">Live Demo</a><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-  <button class="git"><i class="fa-brands fa-github"></i>
+  <button class="git"><a href="https://github.com/ransomsiyeofori-dotcom"><i class="fa-brands fa-github"></i></a>
 </button>
   </div>
   </div>
@@ -306,7 +311,7 @@ Projects</button>
  
  <!---------------Contact------------->
  
-<section class="contact-section">
+<section class="contact-section" id="contact">
   
     <div class="project-icon">
 <i class="fa-regular fa-envelope"></i>
@@ -384,8 +389,8 @@ Projects</button>
   <p>Let's build something amazing together.</p>
   
   <div class="footer-icons">
-  <i class="fa-brands fa-github" id="social-icons"></i>
-<i class="fa-brands fa-linkedin-in" id="social-icons"></i>
+  <a href="https://github.com/ransomsiyeofori-dotcom"><i class="fa-brands fa-github" id="social-icons"></i></a>
+<a href="https://www.linkedin.com/in/ransom-siyeofori-573187204"><i class="fa-brands fa-linkedin-in" id="social-icons"></i></a>
 <i class="fa-brands fa-x-twitter" id="social-icons"></i>
 <i class="fa-brands fa-instagram" id="social-icons"></i>
 </div>
@@ -404,3 +409,6 @@ Projects</button>
  <script src="script.js"></script> 
     </body>
     </html>
+
+  
+  
