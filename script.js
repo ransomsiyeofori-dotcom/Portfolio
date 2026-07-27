@@ -28,8 +28,12 @@ const moreToggle = document.getElementById("more-toggle");
 
 const btnMore = document.getElementById("btn-more");
 
+const toastSuccess = document.getElementById("toast1");
+
+const toastWarning = document.getElementById("toast2");
    
-       
+const toastError = document.getElementById("toast3"); 
+
  
        
 btnOpen.addEventListener("click", () =>{
@@ -135,21 +139,77 @@ textarea.addEventListener("input", textareaValidation);
  
  /*-----final Validation--------*/
  
- form.addEventListener("submit", (e) => {
-   e.preventDefault();
+ form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-const isName = nameValidation();
-const isEmail = emailValidation();
-const isSubject = subjectValidation();
-const isTextarea = textareaValidation();
+    const isName = nameValidation();
+    const isEmail = emailValidation();
+    const isSubject = subjectValidation();
+    const isTextarea = textareaValidation();
 
-if(isName && isNmail && isSubject && isTextarea){
-  alert("Message Sent!!!!!");
-  form.reset();
-} 
+    if (isName && isEmail && isSubject && isTextarea) {
+      
+      const spinner = document.getElementById("spinner");
+btnSend.disable = true;
+   btnSend.textContent = "Sending..."
+   spinner.classList.add("show");
+        try {
 
+            const response = await fetch(
+                "https://edtech-backend-7.onrender.com/api/contact",
+                {
+                    method: "POST",
 
- });
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        name: name.value,
+                        email: email.value,
+                        subject: subject.value,
+                        message: textarea.value
+                    })
+                }
+            );
+
+          const text = await response.text();
+
+console.log(text);
+
+ if (response.ok) {
+   
+   btnSend.disabled = false;
+btnSend.textContent = "Send";
+spinner.classList.remove("show");
+
+   toastSuccess.classList.add("show");
+  setTimeout(() => {
+    
+  toastSuccess.classList.remove("show");
+    
+  },6000);
+                form.reset();
+
+            } else {
+
+                console.log(data.message);
+
+            }
+
+        } catch (error) {
+btnSend.disabled = false;
+btnSend.textContent = "Send";
+ toastError.classList.add("show");
+ setTimeout(() => {
+   toastError.classList.remove("show")
+ },6000);
+
+        }
+
+    }
+
+});
  
  /*--------show more -------*/
  
@@ -158,6 +218,8 @@ btnMore.addEventListener("click", () => {
 moreToggle.classList.toggle("open");
   
 });
+
+
  
    
    
