@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
    <html lang="en">
     <head>
@@ -369,7 +368,7 @@ As a Mathematics Tutor and Administrative Support Officer, I bring patience, ana
   <small id="errortextarea"></small>
   </div>
   
-  <button type="submit" id="btn-send">Send</button>
+  <button type="submit" id="btn-send">Send <div id="spinner"></div> </button>
 </form>
 
 
@@ -379,7 +378,37 @@ As a Mathematics Tutor and Administrative Support Officer, I bring patience, ana
 
   </section>
   
+  <!------------- success toast--------------->
+ <div class="toast-container-one" id="toast1">
+  
+  <i class="fa-solid fa-circle-check" id="toast-icon-one"></i>
+  <div>
+    <h3 class="toast-heading">Success!</h3>
+  <p class="toast-message">
+Thanks for reaching out! Your message has been sent successfully. I'll get back to you soon.</p>
+   </div>
+    
+    
+  </div>
+  
+<!---------------Error------------------>
+  
+<div class="toast-container-three" id="toast3">
+ <i class="fa-solid fa-circle-xmark" id="toast-icon-three"></i>
+
+<div>
+    <h3 class="toast-heading">Error!</h3>
+<p class="toast-message">Something went wrong please try again later.</p>
+   </div>
+    
+    
+  </div>
+
+
+  
   </Main>
+  
+  
       
      <!------------footer--------------->
   
@@ -409,6 +438,3 @@ As a Mathematics Tutor and Administrative Support Officer, I bring patience, ana
  <script src="script.js"></script> 
     </body>
     </html>
-
-  
-  
