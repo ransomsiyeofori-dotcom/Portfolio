@@ -924,6 +924,132 @@ box-shadow:
   .nav-desktop {display: none;}
 .btn-desktop-header {display: none;}
 
+/* =========================
+      PRELOADER
+========================= */
+
+#preloader{
+    position: fixed;
+    inset: 0;
+    background: #080808;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+    transition: opacity .6s ease,
+                visibility .6s ease;
+}
+
+/* Center Container */
+
+.loader{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+
+/* Logo */
+
+.loader img{
+    width:110px;
+
+    animation:pulse 1.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 8px rgba(212,175,55,.45))
+        drop-shadow(0 0 18px rgba(212,175,55,.30));
+}
+
+/* Brand Name */
+
+.loader h2{
+
+    margin:0;
+
+    color:#D4AF37;
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+    font-weight:700;
+
+    animation:fadeText 2s infinite;
+}
+
+/* Gold line */
+
+.loader::after{
+
+    content:"";
+
+    width:140px;
+
+    height:3px;
+
+    background:#D4AF37;
+
+    border-radius:50px;
+
+    animation:loading 1.5s infinite;
+}
+
+/* Logo Pulse */
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* Gold Bar */
+
+@keyframes loading{
+
+    0%{
+        width:40px;
+        opacity:.4;
+    }
+
+    50%{
+        width:140px;
+        opacity:1;
+    }
+
+    100%{
+        width:40px;
+        opacity:.4;
+    }
+
+}
+
+/* Text Fade */
+
+@keyframes fadeText{
+
+    0%,100%{
+        opacity:.7;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
 /*--------Desktop View-----------------*/
 
 @media (min-width: 768px){

@@ -218,6 +218,16 @@ moreToggle.classList.toggle("open");
   
 });
 
+/*--------Pre Loader-----------*/
+const preloader = document.getElementById("preloader");
+
+window.addEventListener("load", () => {
+
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+
+});
+
 
  
    
